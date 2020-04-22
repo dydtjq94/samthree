@@ -122,7 +122,7 @@ body {
   justify-content: center;
 }
 .menu .selected {
-  margin: 0 40px;
+  margin: 0 20px;
   padding: 20px 30px;
   border-bottom: 1px solid #fff;
 }
@@ -133,7 +133,7 @@ body {
 }
 
 .menu .unselected {
-  margin: 0 40px;
+  margin: 0 20px;
   color: gray;
   padding: 20px 30px;
   border-bottom: 1px solid gray;
