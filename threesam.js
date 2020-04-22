@@ -9,16 +9,22 @@ const inputButton = document.querySelector(`.write`);
 const inputWrite = document.querySelector(`.write__input`);
 const form = document.getElementsByClassName(`write__input__column`);
 const input = document.getElementsByClassName(`input__value`);
-
-console.log(form[0]);
-console.log(input);
+const bestList = document.querySelector(`.selected`);
+const newList = document.querySelector(`.unselected`);
+const heart = document.querySelector(`.favorite`);
+const heartImoticon = document.querySelector(`.fa-heart`);
+const heartCount = document.getElementsByClassName(`favorite__count`);
 
 const DISPLAY_NONE = `display__none`;
+const SELECTED = `selected`;
+const UNSELECTED = `unselected`;
 
 let writeTrue = true;
 let title = [`밥버거`, `고추장`, `아이유`, `손흥민`, `하이루`, `키키키`];
 let num = 0;
 prompt.innerHTML = title[num];
+
+console.log(heartCount);
 
 function handleLeftClick(event) {
   num = num - 1;
@@ -63,7 +69,6 @@ function handleInputClick(event) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  //   handleInputClick();
   const inputValue1 = input[0].value;
   const inputValue2 = input[1].value;
   const inputValue3 = input[2].value;
@@ -72,6 +77,24 @@ function handleSubmit(event) {
   console.log(inputValue3);
 }
 
+function handleMenuBest(event) {
+  if (bestList.classList === SELECTED) {
+  } else {
+    bestList.classList = SELECTED;
+    newList.classList = UNSELECTED;
+  }
+}
+
+function handleMenuNew(event) {
+  if (newList.classList === SELECTED) {
+  } else {
+    newList.classList = SELECTED;
+    bestList.classList = UNSELECTED;
+  }
+}
+
+function handleFavoriteClick(event) {}
+
 function init() {
   leftButton.addEventListener("click", handleLeftClick);
   rightButton.addEventListener("click", handleRightClick);
@@ -79,6 +102,9 @@ function init() {
   form[0].addEventListener("submit", handleSubmit);
   form[1].addEventListener("submit", handleSubmit);
   form[2].addEventListener("submit", handleSubmit);
+  bestList.addEventListener("click", handleMenuBest);
+  newList.addEventListener("click", handleMenuNew);
+  heart.addEventListener("click", handleFavoriteClick);
 }
 
 init();

@@ -121,18 +121,19 @@ body {
   font-size: 30px;
   justify-content: center;
 }
-.menu .best__list {
-  margin-right: 40px;
+.menu .selected {
+  margin: 0 40px;
   padding: 20px 30px;
   border-bottom: 1px solid #fff;
 }
 .content .favorite:hover,
-.menu .best__list:hover,
-.menu .new__list:hover {
+.menu .selected:hover,
+.menu .unselected:hover {
   cursor: pointer;
 }
-.menu .new__list {
-  margin-left: 40px;
+
+.menu .unselected {
+  margin: 0 40px;
   color: gray;
   padding: 20px 30px;
   border-bottom: 1px solid gray;
