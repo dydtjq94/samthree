@@ -7,7 +7,7 @@ html {
   background-color: #0f2027;
 }
 body {
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  /* background: linear-gradient(to right, #0f2027, #203a43, #2c5364); */
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@ body {
   margin-bottom: 20px;
 }
 .prompt__box .content .prompt {
-  font-size: 70px;
+  font-size: 55px;
   margin-bottom: 10px;
   font-family: "Stylish", sans-serif;
 }
@@ -109,7 +109,7 @@ body {
 }
 .content,
 .menu {
-  width: 80%;
+  width: 90%;
   display: flex;
 }
 .menu {
