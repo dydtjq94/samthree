@@ -49,10 +49,10 @@ body {
   margin-bottom: 20px;
 }
 .prompt__box .content .prompt {
-  font-size: 60px;
+  font-size: 50px;
   margin-bottom: 10px;
   font-family: "Stylish", sans-serif;
-  width: 150px;
+  width: 130px;
   text-align: center;
 }
 .prompt__box .content h1 {
