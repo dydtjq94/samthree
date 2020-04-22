@@ -54,6 +54,7 @@ body {
   font-family: "Stylish", sans-serif;
   width: 130px;
   text-align: center;
+  background-color: red;
 }
 .prompt__box .content h1 {
   margin-bottom: 10px;
