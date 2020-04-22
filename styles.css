@@ -20,6 +20,7 @@ body {
 }
 
 .title,
+.prompt__box,
 .write__button {
   display: flex;
   justify-content: center;
@@ -29,7 +30,7 @@ body {
   display: flex;
   align-items: center;
   margin-top: 20px;
-  justify-content: space-between;
+
   width: 90%;
 }
 .prompt__box .date {
@@ -49,7 +50,7 @@ body {
 }
 .prompt__box .content .prompt {
   background-color: red;
-  font-size: 5px;
+  font-size: 40px;
   margin-bottom: 10px;
   font-family: "Stylish", sans-serif;
 }
