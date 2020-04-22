@@ -102,7 +102,7 @@ body {
 .write__input .write__input__column > * {
   font-family: "Stylish", sans-serif;
 }
-.write__input .write__input__column input {
+.write__input input {
   width: 98%;
   border: 0;
   background-color: transparent;
@@ -173,4 +173,8 @@ body {
 }
 .content .favorite:active {
   transform: scale(0.95);
+}
+
+.display__none {
+  display: none;
 }
