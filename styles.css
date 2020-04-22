@@ -70,6 +70,7 @@ body {
   width: 100%;
 }
 .write__button .write {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   outline: 0;
