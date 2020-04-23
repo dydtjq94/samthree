@@ -53,10 +53,8 @@ function handleRightClick(event) {
 }
 
 function handleInputClick(event) {
-  console.log(inputWrite.classList);
-
   if (writeTrue) {
-    inputButton.innerHTML = `내 삼행시 올려부리기!`;
+    inputButton.innerHTML = `내 삼행시 자랑하기!!!`;
     writeTrue = false;
     inputWrite.classList.remove(DISPLAY_NONE);
   } else {

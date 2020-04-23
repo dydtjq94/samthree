@@ -4,19 +4,31 @@
   font-family: "Nanum Pen Script", cursive;
 }
 html {
-  background-color: #0f2027;
+  background-color: black;
 }
 body {
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  background-color: black;
+}
+
+.upper__content {
+  position: fixed;
+  color: #ada996;
+  background: linear-gradient(to right, #232526, #414345);
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
 }
 .title {
   font-size: 50px;
   margin-top: 20px;
+  color: white;
 }
 
 .title,
@@ -32,7 +44,7 @@ body {
   width: 90%;
 }
 
-.prompt__box .content {
+.prompt__box .content__title {
   width: 80%;
   height: 20vh;
   display: flex;
@@ -42,7 +54,7 @@ body {
   margin: 0;
 }
 
-.prompt__box .content .prompt {
+.prompt__box .content__title .prompt {
   font-size: 50px;
   margin-bottom: 10px;
   font-family: "Stylish", sans-serif;
@@ -52,7 +64,7 @@ body {
   margin-bottom: 30px;
   margin-top: 50px;
 }
-.prompt__box .content h1 {
+.prompt__box .content__title h1 {
   margin-bottom: 10px;
   font-size: 20px;
 }
@@ -74,12 +86,13 @@ body {
   display: flex;
   justify-content: center;
   outline: 0;
-  background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+  background: linear-gradient(to right, #ffefba, #ffffff);
   color: #fff;
   border: 0;
   border-radius: 20px;
   font-size: 20px;
   padding: 10px 20px;
+  color: #434343;
 }
 .write__button .write:hover {
   cursor: pointer;
@@ -113,10 +126,19 @@ body {
   font-size: 20px;
 }
 .content,
+.content__title,
 .menu {
-  width: 90%;
+  width: 95%;
   display: flex;
 }
+
+.content {
+  position: absolute;
+  top: 50vh;
+  z-index: -1;
+  color: white;
+}
+
 .menu {
   font-size: 30px;
   justify-content: center;
@@ -138,8 +160,9 @@ body {
   padding: 20px 30px;
   border-bottom: 1px solid gray;
 }
-.content {
-  margin-top: 30px;
+.content,
+.content__title {
+  margin-top: 10px;
   flex-direction: column;
   align-items: flex-start;
 }
@@ -147,12 +170,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px;
+  background: linear-gradient(to right, #232526, #414345);
+  border-radius: 20px;
+  padding: 10px 20px;
 }
 .content li {
   font-size: 25px;
   margin: 10px 0;
-  border-bottom: 1px solid #fff;
+  /* border-bottom: 1px solid #fff; */
   width: 100%;
 }
 .content li .content__box__column {
