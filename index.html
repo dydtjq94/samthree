@@ -4,100 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Pen+Script&family=Stylish&display=swap");
-    </style>
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
-    <title>3행시</title>
+    <title>삼행시</title>
   </head>
   <body>
     <div class="upper__content">
-      <div class="title">에넹시</div>
+      <div class="title">삼행시</div>
+      <ul class="prompt__menu">
+        <li class="prompt__title selected__prompt">밥버거</li>
+        <li class="prompt__title">고추장</li>
+        <li class="prompt__title">아이유</li>
+        <li class="prompt__title">손흥민</li>
+        <li class="prompt__title">하이루</li>
+        <li class="prompt__title">키키키</li>
+        <li class="prompt__title">랄랄랄</li>
+        <li class="prompt__title">민민민</li>
+        <li class="prompt__title">키키키</li>
+        <li class="prompt__title">랄랄랄</li>
+        <li class="prompt__title">민민민</li>
+        <li class="prompt__title">키키키</li>
+        <li class="prompt__title">랄랄랄</li>
+        <li class="prompt__title">민민민</li>
+      </ul>
       <div class="prompt__box">
-        <button class="left"><</button>
-        <div class="content__title">
-          <h2 class="prompt">밥버거</h2>
-          <h1>제시어</h1>
-        </div>
-        <button class="right">></button>
+        <h2 class="prompt">밥버거</h2>
       </div>
-      <div class="write__button">
-        <button class="write">나도 삼행시 쓰기!</button>
-      </div>
-      <div class="write__input display__none">
-        <form class="write__input__column">
-          <div class="first__prompt">밥:</div>
-          <input type="text" class="input__value" />
-        </form>
-        <form class="write__input__column">
-          <div class="second__prompt">버:</div>
-          <input type="text" class="input__value" />
-        </form>
-        <form class="write__input__column">
-          <div class="third__prompt">거:</div>
-          <input type="text" class="input__value" />
-        </form>
-      </div>
+      <button class="write__button">
+        <a href="write.html">
+          <div class="fas fa-pen"></div>
+          <div class="write">나도 삼행시 쓰기!</div>
+        </a>
+      </button>
+
       <div class="menu">
-        <div class="selected">인기순</div>
-        <div class="unselected">최신순</div>
+        <div class="selected">
+          <span>인기순</span>
+        </div>
+        <div class="unselected">
+          <span>최신순</span>
+        </div>
       </div>
     </div>
     <ul class="content">
       <li class="content__box">
         <div class="content__box__column">
           <div class="content__clock">2020.04.22</div>
-          <div class="first">밥: 밥먹고싶다</div>
-          <div class="second">버: 버억~</div>
-          <div class="third">거: 거억~</div>
-        </div>
-        <div class="favorite">
-          <div class="far fa-heart"></div>
-          <div class="favorite__count">0</div>
-        </div>
-      </li>
-      <li class="content__box">
-        <div class="content__box__column">
-          <div class="content__clock">2020.04.22</div>
-          <div class="first">밥: 밥먹고싶다</div>
-          <div class="second">버: 버억~</div>
-          <div class="third">거: 거억~</div>
-        </div>
-        <div class="favorite">
-          <div class="far fa-heart"></div>
-          <div class="favorite__count">0</div>
-        </div>
-      </li>
-      <li class="content__box">
-        <div class="content__box__column">
-          <div class="content__clock">2020.04.22</div>
-          <div class="first">밥: 밥먹고싶다</div>
-          <div class="second">버: 버억~</div>
-          <div class="third">거: 거억~</div>
-        </div>
-        <div class="favorite">
-          <div class="far fa-heart"></div>
-          <div class="favorite__count">0</div>
-        </div>
-      </li>
+          <div class="content__wrap">
+            <div class="content__text">
+              <div class="content__text__column">
+                <span class="content__prompt">밥</span>
+                <span class="first">밥하면 생각나는 사람이</span>
+              </div>
+              <div class="content__text__column">
+                <span class="content__prompt">버</span>
+                <span class="second">버거킹에서는 생각나지 않아요</span>
+              </div>
+              <div class="content__text__column">
+                <span class="content__prompt">거</span>
+                <span class="third">거~~래서 전 버거킹을 안가요</span>
+              </div>
+            </div>
 
-      <li class="content__box">
-        <div class="content__box__column">
-          <div class="content__clock">2020.04.22</div>
-          <div class="first">
-            밥: 밥먹고싶은 생각은 아주 조금도 없다 그치만 배고프다
+            <div class="favorite">
+              <i class="fas fa-heart"></i>
+              <div class="favorite__count">0</div>
+            </div>
           </div>
-          <div class="second">버: 버억~</div>
-          <div class="third">거: 거억~</div>
-        </div>
-        <div class="favorite">
-          <div class="far fa-heart"></div>
-          <div class="favorite__count">0</div>
         </div>
       </li>
     </ul>
