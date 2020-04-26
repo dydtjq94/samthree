@@ -95,6 +95,10 @@ a:visited {
   color: white;
 }
 
+a:link {
+  color: white;
+}
+
 .write__button:hover {
   cursor: pointer;
   transform: scale(0.98);
