@@ -202,18 +202,6 @@ a:link {
   margin-right: 10px;
 }
 
-@keyframes colorChange {
-  0% {
-    color: white;
-  }
-  50% {
-    color: #fcbf1e;
-  }
-  100% {
-    color: white;
-  }
-}
-
 .favorite i {
   font-size: 30px;
   padding-bottom: 6px;
@@ -221,7 +209,6 @@ a:link {
 
 .favorite:hover {
   cursor: pointer;
-  animation: colorChange 0.5s infinite;
 }
 
 .write__title {
@@ -288,4 +275,8 @@ form {
 
 .back:hover {
   cursor: pointer;
+}
+
+.color__yellow {
+  color: #fcbf1e;
 }
