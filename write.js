@@ -3,11 +3,8 @@ const promptSpell = document.getElementsByClassName("write__prompt");
 const submit = document.querySelector(`.submit`);
 
 const PROMPT_LS = `prompt`;
-
 const promptSet = localStorage.getItem(PROMPT_LS);
-
 let promptLength = promptTitle.length;
-
 const promptSelected = `selected__prompt`;
 
 function handleSubmit(event) {
