@@ -1,5 +1,4 @@
 @import "reset.css";
-@import "write.css";
 @import url("https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700&display=swap");
 
 * {
@@ -15,12 +14,40 @@ body {
   font-family: "Sunflower", sans-serif;
 }
 
+@media screen and (min-width: 801px) {
+  .upper__content,
+  .content {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 800px) {
+  .upper__content,
+  .content {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 700px) {
+  .upper__content,
+  .content {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .upper__content,
+  .content {
+    width: 100%;
+  }
+}
+
 .upper__content {
   background: linear-gradient(to right, #232526, #414345);
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  border-radius: 0 0 20px 20px;
 }
 
 .title {
@@ -60,6 +87,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 30px;
 }
 
 .prompt__box .prompt {
@@ -146,7 +174,6 @@ a:link {
 }
 
 .content {
-  width: 98%;
   color: white;
 }
 
@@ -168,7 +195,14 @@ a:link {
   border-radius: 20px;
   font-weight: 400;
 }
-
+.gone {
+  opacity: 0;
+  transform: translateY(50px);
+}
+.appear {
+  opacity: 1;
+  transform: translateY(0px);
+}
 .content__box__column {
   display: flex;
   flex-direction: column;
@@ -227,16 +261,20 @@ a:link {
 }
 
 .write__text__column {
-  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  padding: 20px 0 0 0;
   font-size: 30px;
 }
 
 .write__text__column input {
-  font-size: 30px;
+  width: 300px;
+  font-size: 20px;
+  margin-left: 10px;
   padding: 10px;
   border: none;
-  background: transparent;
-  border-bottom: white 1px solid;
+  border-radius: 20px;
+  background: linear-gradient(to right, #232526, #414345);
   outline: none;
   color: white;
   font-weight: 300;
@@ -246,7 +284,7 @@ a:link {
   font-size: 20px;
   color: white;
   background-color: gray;
-  margin-bottom: 20px;
+  margin: 20px 0;
   outline: none;
   padding: 10px 20px;
   border-radius: 20px;
