@@ -1,0 +1,55 @@
+/* list.html css */
+
+.pre__title {
+  font-size: 20px;
+  margin-top: 10px;
+  color: white;
+  font-weight: 700;
+}
+
+.menu__grid {
+  margin-top: 30px;
+  color: white;
+  text-align: center;
+  display: grid;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__grid li {
+  border-bottom: 2px solid rgba(255, 163, 0, 1);
+}
+
+.content__grid {
+  color: white;
+  padding-top: 10px;
+  display: grid;
+  gap: 5px;
+  grid-auto-rows: 30px;
+  align-items: center;
+}
+
+.content__grid li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content__grid:hover {
+  cursor: pointer;
+  transform: scale(0.99);
+}
+
+.content__grid:active {
+  transform: scale(0.95);
+}
+
+.content__grid .prompt__li {
+  font-weight: 700;
+  text-shadow: 0px 5px 10px gray;
+}
+
+.content__grid .date__li {
+  font-size: 18px;
+}

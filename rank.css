@@ -1,0 +1,37 @@
+.ranking {
+  width: 100%;
+  color: white;
+  margin-top: 10px;
+  display: grid;
+  gap: 5px;
+  padding: 0 5px;
+}
+
+.ranking li {
+  margin: 0 auto;
+  font-size: 20px;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+}
+
+.ranking li:hover {
+  transform: scale(1.05);
+}
+
+.like,
+.total {
+  font-size: 15px;
+}
+
+.ranking div {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nation img {
+  width: 128px;
+  height: 128px;
+}

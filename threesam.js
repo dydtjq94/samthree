@@ -2,9 +2,14 @@ const promptTitle = document.getElementsByClassName("prompt__title");
 const bestList = document.querySelector(`.selected`);
 const newList = document.querySelector(`.unselected`);
 const prompt = document.querySelector(`.prompt`);
+const promptTrans = document.querySelector(`.prompt__translate`);
 const favorite = document.querySelectorAll(`.favorite`);
 const heart = document.querySelectorAll(`.fa-heart`);
-const scroll = document.querySelectorAll(".scroll");
+const scroll = document.querySelectorAll(`.scroll`);
+const translate = document.querySelectorAll(`.translate`);
+const first = document.querySelectorAll(`.first`);
+const second = document.querySelectorAll(`.second`);
+const third = document.querySelectorAll(`.third`);
 
 let promptList = [
   `밥버거`,
@@ -16,6 +21,17 @@ let promptList = [
   `BMW`,
   `보름달`,
   `갈무리`,
+];
+let promptTransList = [
+  `(bob bur ger)`,
+  `(bam ha neul)`,
+  `(cham i seul)`,
+  `(a yee you)`,
+  `(kee kee kee)`,
+  `(hee hee hee)`,
+  `(BMW)`,
+  `(bo reum dal)`,
+  `(gal mu ri)`,
 ];
 
 let promptNum = Math.floor(Math.random() * promptList.length);
@@ -56,7 +72,7 @@ function scrollAppear(event) {
   event.classList.add("gone");
   window.addEventListener("scroll", () => {
     let elPos = event.getBoundingClientRect().top,
-      pos = window.innerHeight / 0.9;
+      pos = window.innerHeight / 0.95;
 
     if (elPos < pos) {
       event.classList.add("appear");
@@ -64,6 +80,27 @@ function scrollAppear(event) {
       event.classList.remove("appear");
     }
   });
+}
+
+function handleTranslate(event) {
+  for (i = 0; i < translate.length; i++) {
+    if (event.target === translate[i]) {
+      childNum = i;
+      break;
+    }
+  }
+
+  if (translate[i].innerHTML === `KOR ➡ ENG`) {
+    translate[i].innerHTML = `ENG ➡ KOR`;
+    first[i].innerHTML = `english`;
+    second[i].innerHTML = `english`;
+    third[i].innerHTML = `english`;
+  } else if (translate[i].innerHTML === `ENG ➡ KOR`) {
+    translate[i].innerHTML = `KOR ➡ ENG`;
+    first[i].innerHTML = a;
+    second[i].innerHTML = b;
+    third[i].innerHTML = c;
+  }
 }
 
 function init() {
@@ -78,7 +115,9 @@ function init() {
 
   window.scrollTo(1, 1);
   prompt.innerText = promptList[promptNum];
+  promptTrans.innerText = promptTransList[promptNum];
   localStorage.setItem(PROMPT_LS, prompt.innerText);
+  translate.forEach((e) => e.addEventListener("click", handleTranslate));
 }
 
 init();

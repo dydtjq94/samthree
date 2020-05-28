@@ -11,31 +11,76 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
-    <title>삼행시 작성</title>
+    <title>Write</title>
   </head>
   <body>
-    <div class="write__title">삼행시를 작성해보세요!!</div>
+    <div class="pre__title">Write your three words challenge!</div>
 
-    <form>
+    <form action="{% url 'create' %}" method="POST">
+      {% csrf_token %}
       <p class="write__text__column">
-        <span class="write__prompt">밥</span>
-        <input class="first" name="first" />
+        <span class="write__prompt">{{first}}</span>
+        <input class="korean" name="first" id="first" placeholder="Korean" />
       </p>
+      <!-- <p class="write__text__column">
+        <input
+          class="translation"
+          name="first_translation"
+          id="first_translation"
+          placeholder="English translation(options)"
+        />
+      </p> -->
       <p class="write__text__column">
-        <span class="write__prompt">버</span>
-        <input class="second" name="second" />
+        <span class="write__prompt">{{second}}</span>
+        <input class="korean" name="second" id="second" placeholder="Korean" />
       </p>
+      <!-- <p class="write__text__column">
+        <input
+          class="translation"
+          name="first_translation"
+          id="first_translation"
+          placeholder="English translation(options)"
+        />
+      </p> -->
       <p class="write__text__column">
-        <span class="write__prompt">거</span>
-        <input class="third" name="third" />
+        <span class="write__prompt">{{third}}</span>
+        <input class="korean" name="third" id="third" placeholder="Korean" />
       </p>
+      <!-- <p class="write__text__column">
+        <input
+          class="translation"
+          name="first_translation"
+          id="first_translation"
+          placeholder="English translation(options)"
+        />
+      </p> -->
+      <p class="write__name__column">
+        <!-- <span class="write__name">Your name:</span> -->
+        <input class="name" name="third" id="third" placeholder="Your Name?" />
+      </p>
+
+      <select name="nation" id="nation">
+        <option value="">What is your country?</option>
+        {% for elem in nation %}
+        <option value="{{elem.name}}">{{elem.name}}</option>
+        {%endfor%}
+      </select>
       <p>
-        <input type="button" value="삼행시 공유하기!" class="submit" />
+        <input type="submit" value="Share My Three Words!" class="submit" />
       </p>
     </form>
-    <a href="index.html">
-      <button class="back">뒤로가기</button>
-    </a>
+
+    <div class="prompt__info">{{exp}}</div>
+
+    <!-- <a href="{% url 'home' %}">
+      <button class="back">Back</button>
+    </a> -->
+
+    {% if messages %} {% for message in messages %}
+    <span class="write__prompt">{{message.tags}}</span>
+    <span class="write__prompt">{{message.message}}</span>
+    {% endfor %} {% endif %}
+
     <script src="write.js"></script>
   </body>
 </html>

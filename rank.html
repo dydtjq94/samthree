@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <title>Previous</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <ul class="nav__list__black">
+        <li class="nav__column">
+          <a href="{% url 'home' %}" class="nav__list-link">
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+        <li class="nav__column">
+          <a href="{% url 'list' %}" class="nav__list-link">
+            <i class="fas fa-list-ol"></i>
+          </a>
+        </li>
+        <li class="nav__column">
+          <a href="{% url 'rank' %}" class="nav__list-link">
+            <i class="fas fa-trophy nav__selected"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="pre__title">Ranking by country</div>
+    <ul class="ranking">
+      <li class="nation">
+        <img src="image/image1.png" alt="" />
+        <div class="rank__nation">France</div>
+        <div class="like">total like: 14</div>
+        <div class="total">total post: 18</div>
+      </li>
+      <li class="nation">
+        <img src="image/image1.png" alt="" />
+        <div class="rank__nation">Japan</div>
+        <div class="like">total like: 14</div>
+        <div class="total">total post: 18</div>
+      </li>
+      <li class="nation">
+        <img src="image/image1.png" alt="" />
+        <div class="rank__nation">Korea</div>
+        <div class="like">total like: 14</div>
+        <div class="total">total post: 18</div>
+      </li>
+      <li class="nation">
+        <img src="image/image1.png" alt="" />
+        <div class="rank__nation">Japan</div>
+        <div class="like">total like: 14</div>
+        <div class="total">total post: 18</div>
+      </li>
+      <li class="nation">
+        <div class="rank__nation">Korea</div>
+        <div class="like">total like: 14</div>
+        <div class="total">total post: 18</div>
+      </li>
+      <li class="nation">
+        <div class="rank__nation">Japan</div>
+        <div class="like">total like: 14</div>
+        <div class="total">total post: 18</div>
+      </li>
+      <li class="nation">
+        <div class="rank__nation">Korea</div>
+        <div class="like">total like: 14</div>
+        <div class="total">total post: 18</div>
+      </li>
+      <li class="nation">
+        <div class="rank__nation">Japan</div>
+        <div class="like">total like: 14</div>
+        <div class="total">total post: 18</div>
+      </li>
+    </ul>
+
+    <!-- <script src="rank.js"></script> -->
+  </body>
+</html>
